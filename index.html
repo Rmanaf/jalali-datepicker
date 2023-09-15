@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Jalali Date Picker Plugin Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.wp-support.ir/libs/bootstrap/5.0.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jalali-moment@3.3.0/dist/jalali-moment.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.wp-support.ir/fonts/iransans/fanum/stylesheet.css">
+    <script src="./dist/jalali-datepicker.js"></script>
+    <script src="./dist/themes/bs5.js"></script>
+</head>
+
+<body class="vh-100 mat-typography ">
+    <header class="text-center mt-4 mb-4">
+        <h1>jQuery Jalali Date Picker Plugin Demo</h1>
+        <p dir="ltr">Customizable Persian (Jalali) Date Picker</p>
+    </header>
+    <main class="container font-iransans">
+        <!-- Part 1: Targeting Another Input -->
+        <h2 dir="ltr">Targeting Another Input</h2>
+        <p dir="ltr">Selected date in English format:</p>
+        <input id="test2" />
+        <div class="form-floating mb-3">
+            <input type="text" id="test" class="form-control" placeholder="تاریخ تولد" />
+            <label for="test">
+                تاریخ 
+            </label>
+        </div>
+        <p dir="ltr">Note: The size of the date picker is limited.</p>
+        <hr>
+
+        <!-- Part 2: Displaying Year and Month Only -->
+        <h2 dir="ltr">Displaying Year and Month Only</h2>
+        <p dir="ltr">Selected date in Jalali format (Year and Month Only):</p>
+        <input data-jdp />
+        <input data-jdp />
+        <p dir="ltr">The real value contains the full date.</p>
+        <hr>
+
+        <!-- Part 3: Displaying Date Inside a Div -->
+        <h2 dir="ltr">Displaying Date Inside a Div</h2>
+        <p dir="ltr">Formatted date inside a div (Jalali format):</p>
+        <div data-jdp>1990-03-29 12:00:00</div>
+        <hr>
+
+        <!-- Part 4: Selecting Year with a Range -->
+        <h2 dir="ltr">Selecting Year with a Range</h2>
+        <p dir="ltr">Select a year within the range:</p>
+        <select data-jdp data-jdp-year-range="['1333', '1335']" data-jdp-month="false"
+            data-jdp-date="moment('1380' , 'jYYYY')" data-jdp-format="jYYYY"></select>
+        <p dir="ltr">The real value is a full date according to the selected Jalali year.</p>
+    </main>
+    <script>
+        (($) => {
+            $('#test').jdatepicker({
+                theme: jdatepicker.theme.bs5,
+                format: 'jD jMMMM jYYYY',
+                container: 'main',
+                target: '#test2',
+            }).on('jdp.change', (e, d) => {
+                console.log(d);
+            });
+
+            $('[data-jdp]').jdatepicker({
+                format: 'jMMMM, jYYYY',
+                theme: jdatepicker.theme.bs5,
+                placement: 'bottom',
+                container: 'main',
+                fullWidth: true,
+                minWidth: '300px',
+                footer: false,
+                month: true,
+                year: true
+            }).on('jdp.change', (e, d) => {
+                console.log(d);
+            });
+
+        })(jQuery);
+    </script>
+</body>
+
+</html>
