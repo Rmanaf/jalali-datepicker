@@ -4,5 +4,28 @@
     "jalali-moment": "^3.3.11",
     "jquery": "^3.6.0",
     "moment": "^2.29.3"
-  }
+  },
+  "name": "jalali-datepicker",
+  "description": "The jQuery Jalali Date Picker Plugin is a customizable date picker designed for Persian (Jalali) date selection in web applications. This lightweight and user-friendly plugin simplifies the process of capturing and formatting Persian dates, making it an ideal choice for projects targeting Persian-speaking users.",
+  "version": "1.0.0",
+  "main": "dist/jalali-datepicker.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rmanaf/jalali-datepicker.git"
+  },
+  "keywords": [
+    "jalali",
+    "datepicker",
+    "moment"
+  ],
+  "author": "Rmanaf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rmanaf/jalali-datepicker/issues"
+  },
+  "homepage": "https://github.com/Rmanaf/jalali-datepicker#readme"
 }
