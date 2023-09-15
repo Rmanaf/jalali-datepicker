@@ -1,5 +1,5 @@
 /** 
- * jQuery Jalali Date Picker Plugin | v1.0.0 (https://github.com/Rmanaf/jalali-datepicker) 
+ * jQuery Jalali Date Picker Plugin | v1.0.2 (https://github.com/Rmanaf/jalali-datepicker) 
  * Licensed under MIT (https://github.com/Rmanaf/jalali-datepicker/blob/main/LICENSE) 
  */
 // Define an immediately-invoked function that takes jQuery as a parameter
