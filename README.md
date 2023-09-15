@@ -2,6 +2,9 @@
 
 The jQuery Jalali Date Picker Plugin is a customizable date picker designed for Persian (Jalali) date selection in web applications. This lightweight and user-friendly plugin simplifies the process of capturing and formatting Persian dates, making it an ideal choice for projects targeting Persian-speaking users.
 
+[![GitHub license](https://img.shields.io/github/license/Rmanaf/jalali-datepicker)](https://github.com/Rmanaf/jalali-datepicker/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Rmanaf/jalali-datepicker)](https://github.com/Rmanaf/jalali-datepicker/issues) 
+
 ## Installation
 
 Before using the jQuery Jalali Date Picker Plugin, ensure you have the following dependencies installed:
@@ -76,3 +79,5 @@ $(document).ready(function() {
 * `beforeFooter`: A function to customize content before the date picker footer.
 * `afterFooter`: A function to customize content after the date picker footer.
 
+## Demo 
+See demo [here](https://rmanaf.github.io/jalali-datepicker/index.html)
