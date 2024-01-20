@@ -26,6 +26,12 @@ You can include these dependencies in your project using script tags or package 
 <script src="path/to/jalali-moment.browser.js"></script>
 ```
 
+Install [**jalali-datepicker**](https://www.npmjs.com/package/@rmanaf/jalali-datepicker) using npm:
+
+```bash
+npm install @rmanaf/jalali-datepicker
+```
+
 ## Usage
 
 To use the jQuery Jalali Date Picker Plugin, follow these steps:
@@ -37,7 +43,10 @@ To use the jQuery Jalali Date Picker Plugin, follow these steps:
 
 ```html
 <!-- Include the jQuery Jalali Date Picker Plugin -->
-<script src="path/to/jquery-jalali-datepicker.js"></script>
+<script src="./dist/jalali-datepicker.js"></script>
+
+<!-- Theme -->
+<script src="./dist/themes/bs5.js"></script>
 ```
 
 3. Initialize the date picker on your input elements using jQuery. For example, if you have an input element with the ID "datepicker-input," you can initialize it like this:
@@ -55,7 +64,7 @@ $(document).ready(function() {
 * `date`: The initial date to display in the date picker.
 * `format`: The date format to use for display and input.
 * `lang`: The language/locale for the date picker (default is 'fa' for Persian).
-* `theme`: Custom CSS classes for styling the date picker.
+* `theme`: Custom CSS classes for styling the date picker. e.g. 'jdatepicker.theme.bs5'
 * `events`: Events that trigger the date picker (e.g., 'click').
 * `container`: The HTML element to which the date picker is appended.
 * `prevMonthText`: Text for the "previous month" button.

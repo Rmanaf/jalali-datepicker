@@ -1,5 +1,5 @@
 /** 
- * jQuery Jalali Date Picker Plugin | v1.0.2 (https://github.com/Rmanaf/jalali-datepicker) 
+ * jQuery Jalali Date Picker Plugin | v1.0.3 (https://github.com/Rmanaf/jalali-datepicker) 
  * Licensed under MIT (https://github.com/Rmanaf/jalali-datepicker/blob/main/LICENSE) 
  */
 // Define an immediately-invoked function that takes jQuery as a parameter
@@ -20,7 +20,6 @@
             date: moment(),
             format: 'jYYYY/jM/jD',
             lang: 'fa',
-            theme: 'default',
             events: ['click'],
             container: 'body',
             prevMonthText: 'قبل',
@@ -218,24 +217,28 @@
 
                     $(_o.container).append(_b);
 
+
                     $('#' + _id + '_prev_btn').on('click', (e) => {
 
-                        _o.date = moment(_o.date).subtract(1, 'month');
+                        _o.date = moment(_o.date).subtract(1, 'jMonth');
 
                         _updateHeader();
 
                         _render();
+
                     });
+
 
                     $('#' + _id + '_next_btn').on('click', (e) => {
 
-                        _o.date = _o.date.clone().add(1, 'month');
+                        _o.date = _o.date.clone().add(1, 'jMonth');
 
                         _updateHeader();
 
                         _render();
 
                     });
+
 
                     $('#' + _id + '_cmt_btn').on('click', (e) => {
 
@@ -247,6 +250,7 @@
 
                     });
 
+
                     $('#' + _id + '_month_select').on('change', (e) => {
 
                         let _currentMonth = _o.date.format('jM') - 1;
@@ -255,9 +259,9 @@
 
                         if (_diff != 0) {
                             if (_diff > 0)
-                                _o.date = _o.date.clone().add(_diff, 'month');
+                                _o.date = _o.date.clone().add(_diff, 'jMonth');
                             else
-                                _o.date = _o.date.clone().subtract(Math.abs(_diff), 'month');
+                                _o.date = _o.date.clone().subtract(Math.abs(_diff), 'jMonth');
                         }
 
                         _updateHeader();
@@ -274,9 +278,9 @@
 
                         if (_diff != 0) {
                             if (_diff > 0)
-                                _o.date = _o.date.clone().add(_diff, 'year');
+                                _o.date = _o.date.clone().add(_diff, 'jYear');
                             else
-                                _o.date = _o.date.clone().subtract(Math.abs(_diff), 'year');
+                                _o.date = _o.date.clone().subtract(Math.abs(_diff), 'jYear');
                         }
 
                         _updateHeader();
